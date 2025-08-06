@@ -1,0 +1,14 @@
+info:
+  contact: {}
+  description: This is a sample tiket_test/server Petstore tiket_test/server.
+  termsOfService: http://swagger.io/terms/
+  title: Tech Test Api Docs
+  version: "1.0"
+paths: {}
+securityDefinitions:
+  ApiKeyAuth:
+    description: Just insert after you hit login
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

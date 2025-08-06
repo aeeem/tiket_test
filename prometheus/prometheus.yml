@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'provider'
+    static_configs:
+      - targets: ['172.17.0.1:9911']
+  - job_name: 'server'
+    static_configs:
+      - targets: ['172.17.0.1:9922']
+
+
+

@@ -1,0 +1,22 @@
+FROM prantlf/alpine-glibc:latest
+LABEL maintainer="AEM <aem@gmail.com>"
+
+ENV TZ=Asia/Jakarta \
+    PATH="/app:${PATH}"
+
+RUN apk add --update --no-cache \
+    sqlite \
+    tzdata \
+    ca-certificates \
+    bash \
+    && \
+    cp --remove-destination /usr/share/zoneinfo/${TZ} /etc/localtime && \
+    echo "${TZ}" > /etc/timezone
+
+# See http://stackoverflow.com/questions/34729748/installed-go-binary-not-found-in-path-on-alpine-linux-docker
+# RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+
+WORKDIR /
+
+COPY /server /
+CMD ["./server"]

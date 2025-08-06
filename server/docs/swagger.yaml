@@ -1,0 +1,68 @@
+definitions:
+  delivery.SearchRequest:
+    properties:
+      date:
+        example: "2025-07-10"
+        type: string
+      from:
+        type: string
+      passengers:
+        type: integer
+      to:
+        type: string
+    type: object
+  delivery.SearchResponse:
+    properties:
+      search_id:
+        type: string
+      status:
+        type: string
+    type: object
+  helper.StdResponse:
+    properties:
+      data: {}
+      message:
+        type: string
+      success:
+        type: boolean
+      timestamp:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: This is a sample tiket_test/server Petstore tiket_test/server.
+  termsOfService: http://swagger.io/terms/
+  title: Tech Test Api Docs
+  version: "1.0"
+paths:
+  /api/flight/search:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: register search
+        in: body
+        name: id
+        required: true
+        schema:
+          $ref: '#/definitions/delivery.SearchRequest'
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/helper.StdResponse'
+            - properties:
+                data:
+                  $ref: '#/definitions/delivery.SearchResponse'
+              type: object
+      summary: Adding search queue
+      tags:
+      - Server
+securityDefinitions:
+  ApiKeyAuth:
+    description: Just insert after you hit login
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

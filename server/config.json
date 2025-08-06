@@ -1,0 +1,27 @@
+{
+    "debug": true,
+    "tiket_test/server": {
+        "address": "0.0.0.0",
+        "port": "9911"
+    },
+    "context": {
+        "timeout": 2
+    },
+    "ocpi_sync_rate": "2m",
+    "database": {
+        "host": "172.23.0.1",
+        "port": "5432",
+        "user": "dev_user",
+        "pass": "dev_password",
+        "name": "tech-test"
+    },
+    "redis": {
+        "host": "172.23.0.1",
+        "port": "6379",
+        "user": "dev_user",
+        "pass": "dev_password",
+        "name": "tech-test"
+    },
+    "hostname": "localhost:9911",
+    "seed": false
+}
