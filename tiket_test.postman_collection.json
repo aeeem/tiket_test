@@ -10,7 +10,20 @@
 			"name": "sse",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api/flight/search/{{search_result}}/stream",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"flight",
+						"search",
+						"{{search_result}}",
+						"stream"
+					]
+				}
 			},
 			"response": []
 		},

@@ -1,6 +1,6 @@
 {
     "debug": true,
-    "tiket_test/server": {
+    "server": {
         "address": "0.0.0.0",
         "port": "9922"
     },

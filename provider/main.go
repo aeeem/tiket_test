@@ -26,6 +26,6 @@ func init() {
 // @description				Just insert after you hit login
 func main() {
 
-	internal_http.HttpRun(viper.GetString("tiket_test/server.address")+":"+viper.GetString("tiket_test/server.port"), 2)
+	internal_http.HttpRun(viper.GetString("server.address")+":"+viper.GetString("server.port"), 2)
 
 }
