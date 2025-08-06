@@ -60,4 +60,4 @@ password=dev_password
 ## Architecture
 I'm using Custom Clean-Code architecture, using my own boilerplate. As for Provider service, i decided not to include any rest-api because no requirement from  diagrams. As for testing i'm using manual testing because the time kinda short and i don't use any LLM for my codes because i wanted to challenge myself can i implement service without any LLM help. I'm using hard-coded time.Delay() for delaying any input inside provider to simulate network latency and minimize user config-error. The trade off : User can't try at different networking delay.
 
-Contact me if you need help about deployment. Common problem occur usually at server/provider folder try to run go mod tidy to tidy up any package at server/provider folder
+Contact me if you need help about deployment. Common problem occur usually at server/provider folder try to run ``go mod tidy`` to tidy up any package at server/provider folder
